@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breakup Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <label for="name">Enter Your Name</label>
+    <input type="text" id="name" placeholder="Your Name">
+
+    <label for="partnerName">Enter Your Partner's Name</label>
+    <input type="text" id="partnerName" placeholder="Partner's Name">
+
+    <label for="cheated">Have You Cheated?</label>
+    <select id="cheated">
+      <option value="" disabled selected>Select an option</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <label for="duration">How Old is Your Relationship?</label>
+    <select id="duration">
+      <option value="" disabled selected>Select an option</option>
+      <option value="0to1">0 to 1 year</option>
+      <option value="1to2">1 to 2 years</option>
+      <option value="2to3">2 to 3 years</option>
+      <option value="3andAbove">3 years and above</option>
+    </select>
+
+    <label for="friends">Have Many Male/Female Friends?</label>
+    <select id="friends">
+      <option value="" disabled selected>Select an option</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <button id="checkScoreButton">Check Score</button>
+  </div>
+
+  <!-- Result Popup -->
+  <div id="resultPopup" class="popup">
+    <div class="popup-content">
+      <span id="closePopup" class="close" onclick="closePopup()">×</span>
+      <h2>Relationship Status</h2>
+      <div id="resultText"></div>
+      <div id="emoji"></div>
+      
+      <!-- Speedometer -->
+      <div id="speedometer" class="speedometer-container">
+        <div class="speedometer-bar"></div>
+      </div>
+      <div id="scorePercentage"></div>
+
+      <!-- WhatsApp Share Button -->
+      <a id="whatsappShare" href="#" target="_blank">
+        <button>Share on WhatsApp</button>
+      </a>
+      
+      <button onclick="checkAgain()">Check Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
